@@ -5,19 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Doctinova Push Notifications</title>
   <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-  <script>
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function() {
-      OneSignal.init({
-        appId: "05101e35-f458-4e16-8d61-1cac05795239",
-        serviceWorkerPath: '/OneSignalSDKWorker.js',
-        serviceWorkerUpdaterPath: '/OneSignalSDKUpdaterWorker.js',
-        notifyButton: {
-          enable: true,
-        },
-      });
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "05101e35-f458-4e16-8d61-1cac05795239",
     });
-  </script>
+  });
+</script>
 </head>
 <body>
   <h1>Notifications Doctinova</h1>
